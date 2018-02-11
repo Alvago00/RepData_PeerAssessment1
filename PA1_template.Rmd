@@ -22,7 +22,7 @@ head(Activity)
 summary(Activity)
 str(Activity)
 
-## Converting “date” variable into a classe and the “interval” variable into a factor
+## Converting "date" variable into a classe and the "interval" variable into a factor
 Activity$date <- ymd(Activity$date)
 Activity$interval <- factor(Activity$interval)
 
@@ -91,7 +91,7 @@ hist(Steps.EachDay$steps, breaks = 20, col = "green", xlab = "Number of Steps", 
 Fill.Activity$day <- as.factor(weekdays(Fill.Activity$date))
 
 ## Creating a logical variable "is_weekday" (weekday=TRUE, weekend = FALsE)
-Fill.Activity$is_weekday <- ifelse((!Fill.Activity$day %in% c("sábado","domingo")), TRUE, FALSE)
+Fill.Activity$is_weekday <- ifelse((!Fill.Activity$day %in% c("s�bado","domingo")), TRUE, FALSE)
 
 ## Calculating the average number of steps for weekdays
 Weekdays <- Fill.Activity[Fill.Activity$is_weekday,]
